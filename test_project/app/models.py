@@ -1,8 +1,8 @@
 from django.db import models
 
-from nanoid_field import NanoidField
+from typeid_field import TypeidField
 
 
 class Test(models.Model):
-    id = NanoidField(primary_key=True, editable=False)
-    override = NanoidField(alphabet="123456789", max_length=2)
+    id = TypeidField(primary_key=True, editable=False)
+    override = TypeidField(prefix="pfx")
